@@ -3,9 +3,10 @@ import logo from './logo.svg';
 import './App.css';
 import Header from './Header';
 import Footer from './Footer';
-import { Link, Route, Switch } from 'react-router-dom';
+import { Link, Route, Switch, Redirect } from 'react-router-dom';
 import Streamables from './Streamables';
 import data from './sample.json';
+import Home from './Home';
 
 class App extends Component {
   getJson() {
@@ -41,14 +42,10 @@ class App extends Component {
       <div className="App">
         <Header />
         <div>
-          <Link to="/series">
-            <div> Series</div>
-          </Link>
-          <Link to="/movies">
-            <div>Movies</div>
-          </Link>
           <Switch>
+            <Route exact path="/" component={Home} />
             <Route
+              exact
               path="/series"
               component={props => (
                 <Streamables
@@ -58,11 +55,13 @@ class App extends Component {
               )}
             />
             <Route
+              exact
               path="/movies"
               component={props => (
                 <Streamables {...props} streamablesList={this.getMovieData()} />
               )}
             />
+            <Redirect to="/" />
           </Switch>
         </div>
         <Footer />
