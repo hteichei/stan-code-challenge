@@ -1,7 +1,8 @@
 .streamable {
   width: 14em;
-  margin-bottom: 40px;
-  padding: 10px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  padding: 15px;
   position: relative;
 }
 
@@ -13,6 +14,6 @@ img {
 .card-body {
   height: 50px;
   padding: 10px;
-  font-size: 12px;
+  font-size: 14px;
   text-align: center;
 }

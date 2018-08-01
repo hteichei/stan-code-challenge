@@ -1,7 +1,13 @@
 footer {
   bottom: 0;
-  position: absolute;
+  position: relative;
   width: 100%;
   margin-top: 10px;
   text-align: center;
+  height: 200px;
+}
+
+.text {
+  margin-top: 50px;
+  padding: 10px;
 }

@@ -38,9 +38,10 @@ class App extends Component {
   }
 
   render() {
+    console.log(this.getJson());
     return (
       <div className="App">
-        <Header />
+        <Header type={this.getJson()} />
         <div>
           <Switch>
             <Route exact path="/" component={Home} />
